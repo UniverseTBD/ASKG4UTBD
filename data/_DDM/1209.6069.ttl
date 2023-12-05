@@ -1,0 +1,82 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix utbd-data: <https://w3id.org/UniverseTBD/data/scholarly/> .
+@prefix utbd-onto: <https://w3id.org/UniverseTBD/onto/scholarly#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+utbd-data:Paper-1209.6069 a utbd-onto:Paper ;
+    rdfs:label "Paper label"@en ;
+    dc:title "Paper title"^^xsd:string ;
+    utbd-onto:hasSection utbd-data:Paper-1209.6069-Section-1,
+        utbd-data:Paper-1209.6069-Section-2,
+        utbd-data:Paper-1209.6069-Section-2.1,
+        utbd-data:Paper-1209.6069-Section-2.2,
+        utbd-data:Paper-1209.6069-Section-2.3,
+        utbd-data:Paper-1209.6069-Section-3,
+        utbd-data:Paper-1209.6069-Section-3.1,
+        utbd-data:Paper-1209.6069-Section-3.2,
+        utbd-data:Paper-1209.6069-Section-4,
+        utbd-data:Paper-1209.6069-Section-4.1,
+        utbd-data:Paper-1209.6069-Section-4.2,
+        utbd-data:Paper-1209.6069-Section-5,
+        utbd-data:Paper-1209.6069-Section-5.1,
+        utbd-data:Paper-1209.6069-Section-5.2,
+        utbd-data:Paper-1209.6069-Section-5.3,
+        utbd-data:Paper-1209.6069-Section-5.4,
+        utbd-data:Paper-1209.6069-Section-6,
+        utbd-data:Paper-1209.6069-Section-7 .
+
+utbd-data:Paper-1209.6069-Section-1 a utbd-onto:Section ;
+    rdfs:label "Section label"@en .
+
+utbd-data:Paper-1209.6069-Section-2 a utbd-onto:Section ;
+    rdfs:label "Section label"@en .
+
+utbd-data:Paper-1209.6069-Section-2.1 a utbd-onto:Section ;
+    rdfs:label "Section label"@en .
+
+utbd-data:Paper-1209.6069-Section-2.2 a utbd-onto:Section ;
+    rdfs:label "Section label"@en .
+
+utbd-data:Paper-1209.6069-Section-2.3 a utbd-onto:Section ;
+    rdfs:label "Section label"@en .
+
+utbd-data:Paper-1209.6069-Section-3 a utbd-onto:Section ;
+    rdfs:label "Section label"@en .
+
+utbd-data:Paper-1209.6069-Section-3.1 a utbd-onto:Section ;
+    rdfs:label "Section label"@en .
+
+utbd-data:Paper-1209.6069-Section-3.2 a utbd-onto:Section ;
+    rdfs:label "Section label"@en .
+
+utbd-data:Paper-1209.6069-Section-4 a utbd-onto:Section ;
+    rdfs:label "Section label"@en .
+
+utbd-data:Paper-1209.6069-Section-4.1 a utbd-onto:Section ;
+    rdfs:label "Section label"@en .
+
+utbd-data:Paper-1209.6069-Section-4.2 a utbd-onto:Section ;
+    rdfs:label "Section label"@en .
+
+utbd-data:Paper-1209.6069-Section-5 a utbd-onto:Section ;
+    rdfs:label "Section label"@en .
+
+utbd-data:Paper-1209.6069-Section-5.1 a utbd-onto:Section ;
+    rdfs:label "Section label"@en .
+
+utbd-data:Paper-1209.6069-Section-5.2 a utbd-onto:Section ;
+    rdfs:label "Section label"@en .
+
+utbd-data:Paper-1209.6069-Section-5.3 a utbd-onto:Section ;
+    rdfs:label "Section label"@en .
+
+utbd-data:Paper-1209.6069-Section-5.4 a utbd-onto:Section ;
+    rdfs:label "Section label"@en .
+
+utbd-data:Paper-1209.6069-Section-6 a utbd-onto:Section ;
+    rdfs:label "Section label"@en .
+
+utbd-data:Paper-1209.6069-Section-7 a utbd-onto:Section ;
+    rdfs:label "Section label"@en .
+

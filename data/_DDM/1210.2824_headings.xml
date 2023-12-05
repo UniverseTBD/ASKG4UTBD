@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section>
+  <section ID="1">
+    <heading>Introduction</heading>
+  </section>
+  <section ID="2">
+    <heading>Data</heading>
+  </section>
+  <section ID="3">
+    <heading>Analysis</heading>
+  </section>
+  <section ID="4">
+    <heading>Results</heading>
+    <section ID="4.1">
+      <heading>Radial Gradients</heading>
+    </section>
+    <section ID="4.2">
+      <heading>Vertical Gradients</heading>
+    </section>
+  </section>
+  <section ID="5">
+    <heading>Discussion</heading>
+  </section>
+  <section ID="6">
+    <heading>Reference</heading>
+  </section>
+</section>

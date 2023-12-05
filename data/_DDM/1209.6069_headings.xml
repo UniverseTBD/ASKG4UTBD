@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section>
+  <section ID="1">
+    <heading>Introduction</heading>
+  </section>
+  <section ID="2">
+    <heading>Methodology</heading>
+    <section ID="2.1">
+      <heading>The Aquarius simulations</heading>
+    </section>
+    <section ID="2.2">
+      <heading>Identifying Primordial Globular Clusters</heading>
+    </section>
+    <section ID="2.3">
+      <heading>Treatment of GCs as ionizing Sources</heading>
+    </section>
+  </section>
+  <section ID="3">
+    <heading>Model Extensions: Delayed Star Formation &amp; Dynamical Destruction</heading>
+    <section ID="3.1">
+      <heading>Delayed Star Formation</heading>
+    </section>
+    <section ID="3.2">
+      <heading>Dynamical Destruction</heading>
+    </section>
+  </section>
+  <section ID="4">
+    <heading>Results</heading>
+    <section ID="4.1">
+      <heading>Model 1: `suppressed permentantly'</heading>
+    </section>
+    <section ID="4.2">
+      <heading>Extensions to the Model: Dynamical Disruption &amp; Delayed GC Formation</heading>
+    </section>
+  </section>
+  <section ID="5">
+    <heading>Discussion</heading>
+    <section ID="5.1">
+      <heading>Overview</heading>
+    </section>
+    <section ID="5.2">
+      <heading>Globular Cluster Dark Halo Formation Hypothesis</heading>
+    </section>
+    <section ID="5.3">
+      <heading>Convergence</heading>
+    </section>
+    <section ID="5.4">
+      <heading>Caveats Of This Work</heading>
+    </section>
+  </section>
+  <section ID="6">
+    <heading>Conclusions</heading>
+  </section>
+  <section ID="7">
+    <heading>Reference</heading>
+  </section>
+</section>

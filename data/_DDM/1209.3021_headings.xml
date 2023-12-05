@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section>
+  <section ID="1">
+    <heading>Introduction</heading>
+  </section>
+  <section ID="2">
+    <heading>N-body simulations</heading>
+    <section ID="2.1">
+      <heading>Initial conditions</heading>
+    </section>
+  </section>
+  <section ID="3">
+    <heading>Results</heading>
+  </section>
+  <section ID="4">
+    <heading>Discussion and conclusions</heading>
+  </section>
+  <section ID="5">
+    <heading>Reference</heading>
+  </section>
+</section>

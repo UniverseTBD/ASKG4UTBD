@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section>
+  <section ID="1">
+    <heading>Introduction</heading>
+  </section>
+  <section ID="2">
+    <heading>A Metric to probe the chemical nature of clusters</heading>
+    <section ID="2.1">
+      <heading>A metric for determining chemical difference</heading>
+    </section>
+    <section ID="2.2">
+      <heading>Open cluster abundance data</heading>
+    </section>
+    <section ID="2.3">
+      <heading>The intra- and inter-cluster C distributions</heading>
+    </section>
+  </section>
+  <section ID="3">
+    <heading>Systematics</heading>
+  </section>
+  <section ID="4">
+    <heading>The cluster probability function</heading>
+    <section ID="4.1">
+      <heading>A functional form of PC</heading>
+    </section>
+  </section>
+  <section ID="5">
+    <heading>Explorations in C-space</heading>
+    <section ID="5.1">
+      <heading>Probing chemical dimensionality</heading>
+    </section>
+    <section ID="5.2">
+      <heading>Probing specific elements</heading>
+    </section>
+  </section>
+  <section ID="6">
+    <heading>Cluster reconstruction</heading>
+    <section ID="6.1">
+      <heading>Mock chemical tagging experiment</heading>
+    </section>
+    <section ID="6.2">
+      <heading>Efficiency and constraints</heading>
+    </section>
+    <section ID="6.3">
+      <heading>Tools for chemical tagging</heading>
+    </section>
+  </section>
+  <section ID="7">
+    <heading>Summary &amp; Conclusions</heading>
+  </section>
+  <section ID="8">
+    <heading>Reference</heading>
+  </section>
+</section>
