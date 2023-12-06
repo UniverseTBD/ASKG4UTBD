@@ -6,7 +6,7 @@
 
 utbd-data:Paper-1209.6069 a utbd-onto:Paper ;
     rdfs:label "Paper label"@en ;
-    dc:title "Paper title"^^xsd:string ;
+    dc:title "1209.6069"^^xsd:string ;
     utbd-onto:hasSection utbd-data:Paper-1209.6069-Section-1,
         utbd-data:Paper-1209.6069-Section-2,
         utbd-data:Paper-1209.6069-Section-2.1,
@@ -27,56 +27,56 @@ utbd-data:Paper-1209.6069 a utbd-onto:Paper ;
         utbd-data:Paper-1209.6069-Section-7 .
 
 utbd-data:Paper-1209.6069-Section-1 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Introduction"@en .
 
 utbd-data:Paper-1209.6069-Section-2 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Methodology"@en .
 
 utbd-data:Paper-1209.6069-Section-2.1 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "The Aquarius simulations"@en .
 
 utbd-data:Paper-1209.6069-Section-2.2 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Identifying Primordial Globular Clusters"@en .
 
 utbd-data:Paper-1209.6069-Section-2.3 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Treatment of GCs as ionizing Sources"@en .
 
 utbd-data:Paper-1209.6069-Section-3 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Model Extensions: Delayed Star Formation & Dynamical Destruction"@en .
 
 utbd-data:Paper-1209.6069-Section-3.1 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Delayed Star Formation"@en .
 
 utbd-data:Paper-1209.6069-Section-3.2 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Dynamical Destruction"@en .
 
 utbd-data:Paper-1209.6069-Section-4 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Results"@en .
 
 utbd-data:Paper-1209.6069-Section-4.1 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Model 1: `suppressed permentantly'"@en .
 
 utbd-data:Paper-1209.6069-Section-4.2 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Extensions to the Model: Dynamical Disruption & Delayed GC Formation"@en .
 
 utbd-data:Paper-1209.6069-Section-5 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Discussion"@en .
 
 utbd-data:Paper-1209.6069-Section-5.1 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Overview"@en .
 
 utbd-data:Paper-1209.6069-Section-5.2 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Globular Cluster Dark Halo Formation Hypothesis"@en .
 
 utbd-data:Paper-1209.6069-Section-5.3 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Convergence"@en .
 
 utbd-data:Paper-1209.6069-Section-5.4 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Caveats Of This Work"@en .
 
 utbd-data:Paper-1209.6069-Section-6 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Conclusions"@en .
 
 utbd-data:Paper-1209.6069-Section-7 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Reference"@en .
 

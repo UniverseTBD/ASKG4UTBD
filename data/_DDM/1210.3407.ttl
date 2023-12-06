@@ -6,7 +6,7 @@
 
 utbd-data:Paper-1210.3407 a utbd-onto:Paper ;
     rdfs:label "Paper label"@en ;
-    dc:title "Paper title"^^xsd:string ;
+    dc:title "1210.3407"^^xsd:string ;
     utbd-onto:hasSection utbd-data:Paper-1210.3407-Section-1,
         utbd-data:Paper-1210.3407-Section-2,
         utbd-data:Paper-1210.3407-Section-2.1,
@@ -26,53 +26,53 @@ utbd-data:Paper-1210.3407 a utbd-onto:Paper ;
         utbd-data:Paper-1210.3407-Section-8 .
 
 utbd-data:Paper-1210.3407-Section-1 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Introduction"@en .
 
 utbd-data:Paper-1210.3407-Section-2 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "A Metric to probe the chemical nature of clusters"@en .
 
 utbd-data:Paper-1210.3407-Section-2.1 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "A metric for determining chemical difference"@en .
 
 utbd-data:Paper-1210.3407-Section-2.2 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Open cluster abundance data"@en .
 
 utbd-data:Paper-1210.3407-Section-2.3 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "The intra- and inter-cluster C distributions"@en .
 
 utbd-data:Paper-1210.3407-Section-3 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Systematics"@en .
 
 utbd-data:Paper-1210.3407-Section-4 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "The cluster probability function"@en .
 
 utbd-data:Paper-1210.3407-Section-4.1 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "A functional form of PC"@en .
 
 utbd-data:Paper-1210.3407-Section-5 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Explorations in C-space"@en .
 
 utbd-data:Paper-1210.3407-Section-5.1 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Probing chemical dimensionality"@en .
 
 utbd-data:Paper-1210.3407-Section-5.2 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Probing specific elements"@en .
 
 utbd-data:Paper-1210.3407-Section-6 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Cluster reconstruction"@en .
 
 utbd-data:Paper-1210.3407-Section-6.1 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Mock chemical tagging experiment"@en .
 
 utbd-data:Paper-1210.3407-Section-6.2 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Efficiency and constraints"@en .
 
 utbd-data:Paper-1210.3407-Section-6.3 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Tools for chemical tagging"@en .
 
 utbd-data:Paper-1210.3407-Section-7 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Summary & Conclusions"@en .
 
 utbd-data:Paper-1210.3407-Section-8 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Reference"@en .
 

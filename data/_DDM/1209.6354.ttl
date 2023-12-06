@@ -6,9 +6,9 @@
 
 utbd-data:Paper-1209.6354 a utbd-onto:Paper ;
     rdfs:label "Paper label"@en ;
-    dc:title "Paper title"^^xsd:string ;
+    dc:title "1209.6354"^^xsd:string ;
     utbd-onto:hasSection utbd-data:Paper-1209.6354-Section-1 .
 
 utbd-data:Paper-1209.6354-Section-1 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Reference"@en .
 

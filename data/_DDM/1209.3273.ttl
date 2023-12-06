@@ -6,7 +6,7 @@
 
 utbd-data:Paper-1209.3273 a utbd-onto:Paper ;
     rdfs:label "Paper label"@en ;
-    dc:title "Paper title"^^xsd:string ;
+    dc:title "1209.3273"^^xsd:string ;
     utbd-onto:hasSection utbd-data:Paper-1209.3273-Section-1,
         utbd-data:Paper-1209.3273-Section-2,
         utbd-data:Paper-1209.3273-Section-2.1,
@@ -23,44 +23,44 @@ utbd-data:Paper-1209.3273 a utbd-onto:Paper ;
         utbd-data:Paper-1209.3273-Section-8 .
 
 utbd-data:Paper-1209.3273-Section-1 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Introduction"@en .
 
 utbd-data:Paper-1209.3273-Section-2 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Observation and data reduction"@en .
 
 utbd-data:Paper-1209.3273-Section-2.1 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Basic photometric reduction"@en .
 
 utbd-data:Paper-1209.3273-Section-2.2 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Photometric calibration"@en .
 
 utbd-data:Paper-1209.3273-Section-2.3 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Astrometry"@en .
 
 utbd-data:Paper-1209.3273-Section-2.4 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Comparison with former photometry"@en .
 
 utbd-data:Paper-1209.3273-Section-3 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "The all area photometric diagrams"@en .
 
 utbd-data:Paper-1209.3273-Section-3.1 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Deriving the parameters of early-type stars"@en .
 
 utbd-data:Paper-1209.3273-Section-3.2 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Discussion on spectral types and distances of some stars"@en .
 
 utbd-data:Paper-1209.3273-Section-4 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Hunting for Trumpler 27"@en .
 
 utbd-data:Paper-1209.3273-Section-5 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Infrared information"@en .
 
 utbd-data:Paper-1209.3273-Section-6 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "The region toward l = 355 and the inner spiral structure of the Galaxy"@en .
 
 utbd-data:Paper-1209.3273-Section-7 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Conclusions"@en .
 
 utbd-data:Paper-1209.3273-Section-8 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Reference"@en .
 

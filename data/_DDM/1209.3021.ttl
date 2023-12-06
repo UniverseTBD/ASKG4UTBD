@@ -6,7 +6,7 @@
 
 utbd-data:Paper-1209.3021 a utbd-onto:Paper ;
     rdfs:label "Paper label"@en ;
-    dc:title "Paper title"^^xsd:string ;
+    dc:title "1209.3021"^^xsd:string ;
     utbd-onto:hasSection utbd-data:Paper-1209.3021-Section-1,
         utbd-data:Paper-1209.3021-Section-2,
         utbd-data:Paper-1209.3021-Section-2.1,
@@ -15,20 +15,20 @@ utbd-data:Paper-1209.3021 a utbd-onto:Paper ;
         utbd-data:Paper-1209.3021-Section-5 .
 
 utbd-data:Paper-1209.3021-Section-1 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Introduction"@en .
 
 utbd-data:Paper-1209.3021-Section-2 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "N-body simulations"@en .
 
 utbd-data:Paper-1209.3021-Section-2.1 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Initial conditions"@en .
 
 utbd-data:Paper-1209.3021-Section-3 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Results"@en .
 
 utbd-data:Paper-1209.3021-Section-4 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Discussion and conclusions"@en .
 
 utbd-data:Paper-1209.3021-Section-5 a utbd-onto:Section ;
-    rdfs:label "Section label"@en .
+    rdfs:label "Reference"@en .
 

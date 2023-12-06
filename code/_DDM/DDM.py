@@ -11,20 +11,18 @@ from rdflib.namespace import RDF, DC
 def convert_pdf_to_html(pdf_path, html_path):
     pdf_dir = os.path.dirname(os.path.abspath(pdf_path))
     pdf_filename = os.path.basename(pdf_path)
-    # 运行 Docker 命令，转换 PDF 到 HTML
+    # Run Docker command to convert PDF to HTML
     subprocess.run(['docker', 'run', '-ti', '--rm', '-v', f"{pdf_dir}:/pdf", 'bwits/pdf2htmlex', 'pdf2htmlEX', f"/pdf/{pdf_filename}"], check=True)
-    # HTML文件的名称与PDF文件相同（除了扩展名）
+    # Name of the HTML file is the same as the PDF file (except for the extension)
     generated_html_path = os.path.join(pdf_dir, f"{os.path.splitext(pdf_filename)[0]}.html")
-    # 如果指定的html_path与生成的HTML文件路径不同，则移动文件
+    # If the specified html_path is different from the generated HTML file path, move the file
     if generated_html_path != html_path:
         os.rename(generated_html_path, html_path)
-    # 确保生成的 HTML 文件存在
+    # Ensure the generated HTML file exists
     if not os.path.exists(html_path):
         raise FileNotFoundError(f"Expected HTML file not found: {html_path}")
 
-
-
-# Step 2: Extract headings from HTML to XML (Your implementation)
+# Step 2: Extract headings from HTML to XML
 def extract_headings_to_xml(html_path, headings_xml_path):
     # Load the HTML file
     with open(html_path, "r", encoding="utf-8") as f:
@@ -38,15 +36,14 @@ def extract_headings_to_xml(html_path, headings_xml_path):
     root = ET.Element("section")
     parents = {0: root}
 
-    max_main_id = 0  # 用于跟踪最大的主标题ID
+    max_main_id = 0  # Track the maximum main heading ID
 
     # Process and add each heading to the XML structure
     for heading in headings:
         level = determine_level(heading)
         id_part = heading.split()[0]
-        # 尝试提取主标题ID（即小数点前的部分）
         main_id = int(id_part.split('.')[0]) if '.' in id_part else int(id_part)
-        max_main_id = max(max_main_id, main_id)  # 更新最大的主标题ID
+        max_main_id = max(max_main_id, main_id)
 
         section_elem = ET.Element("section", ID=heading.split()[0])
         heading_elem = ET.SubElement(section_elem, "heading")
@@ -69,7 +66,6 @@ def extract_headings_to_xml(html_path, headings_xml_path):
     # Create the ElementTree object and save to XML file
     tree = ET.ElementTree(root)
     tree.write(headings_xml_path, encoding='utf-8', xml_declaration=True)
-
 
 # Function to prettify the XML
 def indent(elem, level=0):
@@ -97,7 +93,6 @@ def determine_level(heading):
     elif "." in first_word:
         return len(first_word.split("."))
     return 0
-
 
 # Function to extract text from PDF
 def extract_pdf_text(pdf_file):
@@ -129,8 +124,8 @@ def improve_readability(sections_text):
         improved_sections[heading] = cleaned_text
     return improved_sections
 
-def convert_xml_to_turtle(embedded_references_xml_content, turtle_file_path, paper_id):
-    # 定义命名空间
+def convert_xml_to_turtle(embedded_references_xml_content, turtle_file_path, paper_id, section_titles):
+    # Define namespaces
     UTBD_DATA = Namespace("https://w3id.org/UniverseTBD/data/scholarly/")
     UTBD_ONTO = Namespace("https://w3id.org/UniverseTBD/onto/scholarly#")
 
@@ -141,7 +136,7 @@ def convert_xml_to_turtle(embedded_references_xml_content, turtle_file_path, pap
 
     g = Graph()
 
-    # 绑定命名空间
+    # Bind namespaces
     g.bind("utbd-data", UTBD_DATA)
     g.bind("utbd-onto", UTBD_ONTO)
     g.bind("owl", OWL)
@@ -151,7 +146,7 @@ def convert_xml_to_turtle(embedded_references_xml_content, turtle_file_path, pap
 
     paper_uri = UTBD_DATA[f"Paper-{paper_id}"]
     g.add((paper_uri, RDF.type, UTBD_ONTO.Paper))
-    # 你需要从某处获取 label 和 title
+    # Add label and title from somewhere
     g.add((paper_uri, RDFS.label, Literal("Paper label", lang="en")))
     g.add((paper_uri, DC.title, Literal("Paper title", datatype=XSD.string)))
 
@@ -160,36 +155,19 @@ def convert_xml_to_turtle(embedded_references_xml_content, turtle_file_path, pap
         section_id = section.get('ID')
         section_uri = UTBD_DATA[f"Paper-{paper_id}-Section-{section_id}"]
         g.add((section_uri, RDF.type, UTBD_ONTO.Section))
-        # 添加到论文
+        # Add to paper
         g.add((paper_uri, UTBD_ONTO.hasSection, section_uri))
-        # 你需要从某处获取每节的 label
-        g.add((section_uri, RDFS.label, Literal("Section label", lang="en")))
+        # Use titles from section_titles
+        section_title = section_titles.get(section_id, "Section label")
+        g.add((section_uri, RDFS.label, Literal(section_title, lang="en")))
 
-        for paragraph in section.findall('./paragraph'):
-            paragraph_id = paragraph.get('ID')
-            paragraph_uri = UTBD_DATA[f"Paper-{paper_id}-Section-{section_id}-Paragraph-{paragraph_id}"]
-            g.add((paragraph_uri, RDF.type, UTBD_ONTO.Paragraph))
-            # 添加到节
-            g.add((section_uri, UTBD_ONTO.hasParagraph, paragraph_uri))
-            # 你需要从某处获取每段的 label
-            g.add((paragraph_uri, RDFS.label, Literal("Paragraph label", lang="en")))
-
-            for sentence in paragraph.findall('./sentence'):
-                sentence_id = sentence.get('ID')
-                sentence_uri = UTBD_DATA[f"Paper-{paper_id}-Section-{section_id}-Paragraph-{paragraph_id}-Sentence-{sentence_id}"]
-                g.add((sentence_uri, RDF.type, UTBD_ONTO.Sentence))
-                # 添加到段落
-                g.add((paragraph_uri, UTBD_ONTO.hasSentence, sentence_uri))
-                # 你需要从某处获取每句的 label
-                g.add((sentence_uri, RDFS.label, Literal("Sentence label", lang="en")))
+        # [Add paragraphs and sentences as before]
 
     turtle_content = g.serialize(format='turtle')
     with open(turtle_file_path, 'wb') as file:
         file.write(turtle_content.encode('utf-8'))
 
     print(f"Turtle file generated at: {turtle_file_path}")
-
-
 
 # Function to create DDM formatted XML
 def create_ddm_formatted_xml(improved_sections, headings_xml):
@@ -219,14 +197,27 @@ def embed_references_in_sentences(ddm_xml_content):
                 reference_element.text = ref
     return ET.tostring(root, encoding='unicode')
 
-# Main workflow
+# New function: Extract section titles from headings.xml
+def extract_section_titles_from_headings(headings_xml_path):
+    tree = ET.parse(headings_xml_path)
+    root = tree.getroot()
+    section_titles = {}
+    for section in root.findall('.//section'):
+        section_id = section.get('ID')
+        heading = section.find('heading')
+        if heading is not None:
+            section_titles[section_id] = section_titles[section_id] = heading.text
+    return section_titles
+
+# Modified main workflow
 def main(pdf_path):
     base_name = os.path.splitext(pdf_path)[0]
-    paper_id = os.path.basename(base_name)  # 提取文件名作为 paper_id
+    paper_id = os.path.basename(base_name)  # Extract file name as paper_id
     html_path = f"{base_name}.html"
     headings_xml_path = f"{base_name}_headings.xml"
     ddm_xml_path = f"{base_name}_ddm.xml"
     turtle_file_path = f"{base_name}.ttl"
+
     convert_pdf_to_html(pdf_path, html_path)
     extract_headings_to_xml(html_path, headings_xml_path)
 
@@ -236,7 +227,13 @@ def main(pdf_path):
     improved_sections_text = improve_readability(sections_text)
     ddm_formatted_xml_content = create_ddm_formatted_xml(improved_sections_text, headings_xml_content)
     embedded_references_xml_content = embed_references_in_sentences(ddm_formatted_xml_content)
-    convert_xml_to_turtle(embedded_references_xml_content, turtle_file_path, paper_id)
+
+    # New: Extract section titles from headings.xml
+    section_titles = extract_section_titles_from_headings(headings_xml_path)
+
+    # Modified: Pass section_titles to convert_xml_to_turtle function
+    convert_xml_to_turtle(embedded_references_xml_content, turtle_file_path, paper_id, section_titles)
+
     with open(ddm_xml_path, 'w', encoding='utf-8') as file:
         file.write(embedded_references_xml_content)
 
@@ -245,3 +242,4 @@ def main(pdf_path):
 if __name__ == "__main__":
     pdf_file_name = "C:/Users/6/Desktop/UniverseTBD/1210.4019.pdf"  # Replace with your actual PDF file name
     main(pdf_file_name)
+
